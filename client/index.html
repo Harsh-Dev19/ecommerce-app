@@ -1,16 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Luxury Perfumes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurum Noir — Luxury Perfume Maison</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Luxury Perfumes</h1>
-  <p>Find your signature scent</p>
+  <!-- ============ NAVIGATION ============ -->
+  <nav>
+    <a href="index.html" class="nav-logo">AURUM<span>noir</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Maison</a></li>
+      <li><a href="shop.html">Collections</a></li>
+      <li><a href="product.html?id=1">Signatures</a></li>
+      <li><a href="login.html">Account</a></li>
+    </ul>
+    <a href="cart.html" class="nav-cart">
+      <span>Cart</span>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
 
-  <div id="products"></div>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Extrait de Parfum · Est. 2011</div>
+      <h1>
+        The Art of<br>
+        <em>Invisible</em><br>
+        Luxury
+      </h1>
+      <p class="hero-desc">
+        Each Aurum Noir fragrance is an intimate portrait — composed from the world's rarest botanicals, resins, and absolutes. Worn by those who understand that true luxury is never seen, only felt.
+      </p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-gold"><span>Explore Collection</span></a>
+        <a href="product.html?id=1" class="btn btn-ghost"><span>Our Signature</span></a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">87</span>
+          <span class="hero-stat-label">Rare Ingredients</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">14</span>
+          <span class="hero-stat-label">Artisan Perfumers</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">62+</span>
+          <span class="hero-stat-label">Countries Shipped</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-line"></div>
+
+        <!-- Decorative CSS Bottle -->
+        <div class="hero-bottle">
+          <div class="bottle-cap"></div>
+          <div class="bottle-neck"></div>
+          <div class="bottle-body">
+            <div class="bottle-label">
+              <span class="bottle-label-name">Oud Imperiale</span>
+              <span class="bottle-label-sub">Aurum Noir · Paris</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <!-- Duplicated for seamless loop -->
+      <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping on Orders Over $300</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Handcrafted in Grasse, France</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Ethically Sourced Ingredients</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Complimentary Gift Wrapping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>30-Day Returns</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Extrait de Parfum Concentration</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping on Orders Over $300</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Handcrafted in Grasse, France</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Ethically Sourced Ingredients</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Complimentary Gift Wrapping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>30-Day Returns</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Extrait de Parfum Concentration</span>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED PRODUCTS ============ -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Curated Selection</span>
+      <h2>Featured <em style="font-style:italic;color:var(--gold)">Fragrances</em></h2>
+    </div>
+    <div class="products-grid" id="featured-grid">
+      <!-- Injected by script.js -->
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="shop.html" class="btn btn-outline"><span>View All Collections</span></a>
+    </div>
+  </section>
+
+  <!-- ============ DIVIDER ============ -->
+  <div style="padding:0 4rem"><div class="divider"><div class="divider-diamond"></div></div></div>
+
+  <!-- ============ PHILOSOPHY ============ -->
+  <section>
+    <div class="philosophy">
+      <div class="philosophy-visual">
+        <div class="philosophy-bg"></div>
+        <div class="philosophy-num">XIV</div>
+        <div class="philosophy-icon">⚗️</div>
+      </div>
+      <div class="philosophy-text">
+        <span class="section-label">Our Philosophy</span>
+        <h2>Fragrance as <em style="font-style:italic;color:var(--gold)">Memory</em></h2>
+        <p>
+          A perfume is not merely a scent — it is a fragment of time, preserved in amber. At Aurum Noir, we believe in the ancient alchemy of perfumery: the slow marriage of rare ingredients, the patience of maceration, the precision of the nose.
+        </p>
+        <p>
+          Our master perfumers spend years in Grasse, Oman, and Tokyo — sourcing what cannot be synthesized, learning what cannot be taught.
+        </p>
+        <div class="philosophy-points">
+          <div class="philosophy-point">Rare natural ingredients, ethically sourced</div>
+          <div class="philosophy-point">No synthetic base notes — ever</div>
+          <div class="philosophy-point">Each batch crafted in small quantities</div>
+          <div class="philosophy-point">Aged minimum 6 months before bottling</div>
+        </div>
+        <a href="shop.html" class="btn btn-outline" style="margin-top:1rem"><span>Explore the Craft</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTIONS ============ -->
+  <section style="padding-top:2rem">
+    <div class="section-header">
+      <span class="section-label">The World of Aurum Noir</span>
+      <h2>Our <em style="font-style:italic;color:var(--gold)">Collections</em></h2>
+    </div>
+    <div class="collections-grid">
+      <div class="collection-item" onclick="window.location.href='shop.html'">
+        <div class="collection-emoji">🏺</div>
+        <div class="collection-content">
+          <h3>Oriental Nights</h3>
+          <p>8 Fragrances · Oud, Amber, Resins</p>
+        </div>
+        <div class="collection-arrow">→</div>
+      </div>
+      <div class="collection-item" onclick="window.location.href='shop.html'">
+        <div class="collection-emoji">🌹</div>
+        <div class="collection-content">
+          <h3>Floral Noir</h3>
+          <p>5 Fragrances · Roses, Tuberose</p>
+        </div>
+        <div class="collection-arrow">→</div>
+      </div>
+      <div class="collection-item" onclick="window.location.href='shop.html'">
+        <div class="collection-emoji">🌊</div>
+        <div class="collection-content">
+          <h3>Aqua Royale</h3>
+          <p>4 Fragrances · Marine, Fresh</p>
+        </div>
+        <div class="collection-arrow">→</div>
+      </div>
+      <div class="collection-item" onclick="window.location.href='shop.html'">
+        <div class="collection-emoji">🌿</div>
+        <div class="collection-content">
+          <h3>Sacred Woods</h3>
+          <p>6 Fragrances · Sandalwood, Cedar</p>
+        </div>
+        <div class="collection-arrow">→</div>
+      </div>
+      <div class="collection-item" onclick="window.location.href='shop.html'">
+        <div class="collection-emoji">💎</div>
+        <div class="collection-content">
+          <h3>Prestige Absolut</h3>
+          <p>3 Fragrances · Rare, Exclusive</p>
+        </div>
+        <div class="collection-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section style="background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div style="max-width:700px;margin:0 auto;text-align:center">
+      <span class="section-label">Voices</span>
+      <blockquote style="font-family:var(--font-serif);font-style:italic;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;line-height:1.5;color:var(--white);margin-bottom:2rem">
+        "Oud Imperiale stopped time. I wore it on my wedding day and still remember the silence that fell when I entered the room."
+      </blockquote>
+      <p style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">— Laila A., Dubai</p>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section>
+    <div style="max-width:600px;margin:0 auto;text-align:center">
+      <span class="section-label">Join the Maison</span>
+      <h2 style="margin-bottom:1rem">First to Experience <em style="font-style:italic;color:var(--gold)">New Arrivals</em></h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:2.5rem">Members receive early access, exclusive sampling kits, and invitations to private fragrance events.</p>
+      <div style="display:flex;gap:0;max-width:420px;margin:0 auto">
+        <input type="email" placeholder="Your email address" style="flex:1;background:var(--card-bg);border:1px solid var(--border);border-right:none;color:var(--white);font-family:var(--font-sans);font-size:.82rem;padding:.9rem 1.2rem;outline:none">
+        <button class="btn btn-gold" style="white-space:nowrap"><span>Join</span></button>
+      </div>
+      <p style="font-size:.65rem;color:var(--muted);margin-top:1rem;letter-spacing:.05em">No spam. Unsubscribe anytime. Privacy is a luxury we protect.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AURUM<em style="font-style:italic;color:var(--white)">noir</em></h3>
+        <p>A Parisian perfume maison dedicated to the art of rare and exceptional fragrances. Crafted for those who understand that scent is the highest form of luxury.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="shop.html">All Fragrances</a></li>
+          <li><a href="shop.html">Oriental Nights</a></li>
+          <li><a href="shop.html">Floral Noir</a></li>
+          <li><a href="shop.html">Sacred Woods</a></li>
+          <li><a href="shop.html">Prestige Absolut</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">The Perfumers</a></li>
+          <li><a href="#">Ingredients</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="tracking.html">Order Tracking</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="login.html">My Account</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aurum Noir. All rights reserved.</p>
+      <p style="color:var(--gold);font-size:.7rem;letter-spacing:.1em">PARIS · DUBAI · TOKYO · NEW YORK</p>
+    </div>
+  </footer>
+
+  <div id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>

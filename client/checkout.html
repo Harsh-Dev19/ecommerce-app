@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Aurum Noir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav>
+    <a href="index.html" class="nav-logo">AURUM<span>noir</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Maison</a></li>
+      <li><a href="shop.html">Collections</a></li>
+      <li><a href="cart.html">← Back to Cart</a></li>
+    </ul>
+    <a href="cart.html" class="nav-cart">
+      <span>Cart</span>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-hero" style="min-height:26vh">
+    <div>
+      <span class="section-label">Secure Checkout</span>
+      <h1>Complete Your <em style="font-style:italic;color:var(--gold)">Order</em></h1>
+    </div>
+  </div>
+
+  <div class="checkout-layout">
+
+    <!-- LEFT: Checkout Form -->
+    <div>
+
+      <!-- Step Indicator -->
+      <div class="checkout-steps" style="margin-bottom:3rem">
+        <div class="step active">
+          <div class="step-num">1</div>
+          <span class="step-label">Delivery</span>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <span class="step-label">Payment</span>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <span class="step-label">Review</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: Delivery -->
+      <div class="checkout-section" id="step-delivery">
+        <h3>Delivery Information <span>Step 1 of 3</span></h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Alexandre" value="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Moreau" value="">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label class="form-label">Street Address</label>
+          <input type="text" class="form-input" placeholder="12 Rue de la Paix">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input type="text" class="form-input" placeholder="Paris">
+          </div>
+          <div class="form-group">
+            <label class="form-label">State / Province</label>
+            <input type="text" class="form-input" placeholder="Île-de-France">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Postal Code</label>
+            <input type="text" class="form-input" placeholder="75001">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Country</label>
+            <select class="form-input" style="cursor:pointer">
+              <option>France</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>UAE</option>
+              <option>Japan</option>
+              <option>India</option>
+              <option>Singapore</option>
+              <option>Australia</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Shipping Method -->
+        <div style="margin-top:2rem">
+          <div style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Shipping Method</div>
+          <div style="display:flex;flex-direction:column;gap:.8rem">
+            <label style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--gold);padding:1rem;cursor:pointer">
+              <div style="display:flex;align-items:center;gap:.8rem">
+                <input type="radio" name="shipping" checked style="accent-color:var(--gold)">
+                <div>
+                  <div style="font-size:.82rem">Standard Delivery</div>
+                  <div style="font-size:.68rem;color:var(--muted)">5–7 business days</div>
+                </div>
+              </div>
+              <span style="font-size:.82rem;color:var(--gold)">Free</span>
+            </label>
+            <label style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);padding:1rem;cursor:pointer">
+              <div style="display:flex;align-items:center;gap:.8rem">
+                <input type="radio" name="shipping" style="accent-color:var(--gold)">
+                <div>
+                  <div style="font-size:.82rem">Express Delivery</div>
+                  <div style="font-size:.68rem;color:var(--muted)">2–3 business days</div>
+                </div>
+              </div>
+              <span style="font-size:.82rem;color:var(--gold)">$25</span>
+            </label>
+            <label style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);padding:1rem;cursor:pointer">
+              <div style="display:flex;align-items:center;gap:.8rem">
+                <input type="radio" name="shipping" style="accent-color:var(--gold)">
+                <div>
+                  <div style="font-size:.82rem">White Glove Courier</div>
+                  <div style="font-size:.68rem;color:var(--muted)">Next business day · Signature required</div>
+                </div>
+              </div>
+              <span style="font-size:.82rem;color:var(--gold)">$75</span>
+            </label>
+          </div>
+        </div>
+
+        <button onclick="nextStep()" class="btn btn-gold" style="margin-top:2rem;width:100%;justify-content:center;display:flex">
+          <span>Continue to Payment →</span>
+        </button>
+      </div>
+
+      <!-- STEP 2: Payment -->
+      <div class="checkout-section" id="step-payment" style="display:none">
+        <h3>Payment Details <span>Step 2 of 3</span></h3>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+          <button class="payment-method active">
+            <div class="payment-method-icon">💳</div>
+            <div class="payment-method-label">Card</div>
+          </button>
+          <button class="payment-method">
+            <div class="payment-method-icon">🅿️</div>
+            <div class="payment-method-label">PayPal</div>
+          </button>
+          <button class="payment-method">
+            <div class="payment-method-icon">🍎</div>
+            <div class="payment-method-label">Apple Pay</div>
+          </button>
+          <button class="payment-method">
+            <div class="payment-method-icon">🏦</div>
+            <div class="payment-method-label">Bank</div>
+          </button>
+        </div>
+
+        <!-- Card Preview -->
+        <div class="card-preview">
+          <div class="card-chip">💳</div>
+          <div class="card-number" id="card-preview-num">•••• •••• •••• ••••</div>
+          <div class="card-meta">
+            <div>
+              <div class="card-meta-label">Cardholder</div>
+              <div class="card-meta-value" id="card-preview-name">YOUR NAME</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Expires</div>
+              <div class="card-meta-value" id="card-preview-exp">MM/YY</div>
+            </div>
+            <div>
+              <div class="card-meta-label">CVC</div>
+              <div class="card-meta-value">•••</div>
+            </div>
+          </div>
+          <!-- Chip reflection -->
+          <div style="position:absolute;top:0;right:0;width:60%;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(201,168,76,.03) 100%);pointer-events:none"></div>
+        </div>
+
+        <!-- Card Details Form -->
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label class="form-label">Card Number</label>
+          <input type="text" id="card-number" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label class="form-label">Cardholder Name</label>
+          <input type="text" id="card-name" class="form-input" placeholder="Alexandre Moreau">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Expiry Date</label>
+            <input type="text" id="card-expiry" class="form-input" placeholder="MM / YY" maxlength="7"
+              oninput="const v=this.value.replace(/\D/g,'');this.value=v.length>2?v.slice(0,2)+' / '+v.slice(2,4):v;document.getElementById('card-preview-exp').textContent=this.value||'MM/YY'">
+          </div>
+          <div class="form-group">
+            <label class="form-label">CVC</label>
+            <input type="text" class="form-input" placeholder="•••" maxlength="4"
+              oninput="this.value=this.value.replace(/\D/g,'')">
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:.7rem;margin:1.5rem 0;padding:1rem;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1)">
+          <span style="font-size:1.2rem">🔒</span>
+          <p style="font-size:.72rem;color:var(--muted);line-height:1.6">Your payment information is encrypted with 256-bit SSL. Aurum Noir does not store your card details.</p>
+        </div>
+
+        <div style="display:flex;gap:1rem;margin-top:1rem">
+          <button onclick="prevStep()" class="btn btn-ghost" style="flex:1;justify-content:center"><span>← Back</span></button>
+          <button onclick="nextStep()" class="btn btn-gold" style="flex:2;justify-content:center;display:flex"><span>Review Order →</span></button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Review -->
+      <div class="checkout-section" id="step-review" style="display:none">
+        <h3>Review Your Order <span>Step 3 of 3</span></h3>
+
+        <div style="background:var(--card-bg);border:1px solid var(--border);padding:2rem;margin-bottom:1.5rem">
+          <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Delivery To</div>
+          <p style="font-size:.85rem;color:var(--off-white)">Alexandre Moreau<br>12 Rue de la Paix, 75001 Paris<br>France</p>
+        </div>
+
+        <div style="background:var(--card-bg);border:1px solid var(--border);padding:2rem;margin-bottom:1.5rem">
+          <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Payment Method</div>
+          <p style="font-size:.85rem;color:var(--off-white)">💳 Visa ending in •••• 3456</p>
+        </div>
+
+        <!-- Gift Message -->
+        <div style="margin-bottom:2rem">
+          <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Gift Message (Optional)</div>
+          <textarea class="form-input" rows="3" placeholder="Include a personal message for gift packaging..." style="resize:vertical"></textarea>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:.7rem;margin-bottom:2rem">
+          <input type="checkbox" id="agree-terms" style="accent-color:var(--gold);margin-top:.15rem;flex-shrink:0">
+          <label for="agree-terms" style="font-size:.72rem;color:var(--muted);line-height:1.7">
+            I agree to the <a href="#" style="color:var(--gold)">Terms of Service</a> and <a href="#" style="color:var(--gold)">Privacy Policy</a>. I confirm that all information provided is correct and authorize this payment.
+          </label>
+        </div>
+
+        <div style="display:flex;gap:1rem">
+          <button onclick="prevStep()" class="btn btn-ghost" style="flex:1;justify-content:center"><span>← Back</span></button>
+          <button id="place-order" class="btn btn-gold" style="flex:2;justify-content:center;display:flex"><span>✦ Place Order</span></button>
+        </div>
+
+        <p style="text-align:center;font-size:.68rem;color:var(--muted);margin-top:1.5rem;letter-spacing:.05em">
+          🔒 256-bit SSL Encrypted · No payment data is stored on our servers
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Order Summary -->
+    <div class="checkout-order-summary">
+      <h3 style="font-size:1.2rem;font-weight:300;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)">
+        Order Summary
+      </h3>
+
+      <!-- Items -->
+      <div id="checkout-order-items">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <!-- Totals -->
+      <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="co-subtotal">$0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="co-shipping">Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax</span>
+          <span id="co-tax">$0</span>
+        </div>
+      </div>
+
+      <div class="summary-total" style="margin-top:1rem">
+        <span style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)">Total</span>
+        <span class="summary-total-price" id="co-total">$0</span>
+      </div>
+
+      <!-- Trust Badges -->
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.8rem">
+        <div style="display:flex;align-items:center;gap:.7rem;font-size:.72rem;color:var(--muted)">
+          <span>🛡️</span> <span>Buyer Protection Guarantee</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.7rem;font-size:.72rem;color:var(--muted)">
+          <span>↩️</span> <span>30-Day Returns on All Orders</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.7rem;font-size:.72rem;color:var(--muted)">
+          <span>🌿</span> <span>Sustainably Packaged</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.7rem;font-size:.72rem;color:var(--muted)">
+          <span>🎁</span> <span>Complimentary Gift Wrapping</span>
+        </div>
+      </div>
+
+      <!-- Help -->
+      <div style="margin-top:2rem;padding:1rem;border:1px solid var(--border);text-align:center">
+        <p style="font-size:.7rem;color:var(--muted)">Need help? <a href="#" style="color:var(--gold)">Contact our concierge</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AURUM<em style="font-style:italic;color:var(--white)">noir</em></h3>
+        <p>A Parisian perfume maison dedicated to the art of rare fragrances.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="tracking.html">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Security</h4>
+        <ul>
+          <li><a href="#">SSL Certificate</a></li>
+          <li><a href="#">Payment Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aurum Noir. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script>
+    // Multi-step navigation
+    let currentStep = 1;
+
+    function updateStepUI() {
+      // Update step indicators
+      document.querySelectorAll('.step').forEach((step, i) => {
+        step.classList.remove('active', 'done');
+        if (i + 1 === currentStep) step.classList.add('active');
+        if (i + 1 < currentStep) step.classList.add('done');
+      });
+
+      // Show/hide sections
+      document.getElementById('step-delivery').style.display = currentStep === 1 ? 'block' : 'none';
+      document.getElementById('step-payment').style.display = currentStep === 2 ? 'block' : 'none';
+      document.getElementById('step-review').style.display = currentStep === 3 ? 'block' : 'none';
+
+      // Scroll to top of form
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    function nextStep() {
+      if (currentStep < 3) { currentStep++; updateStepUI(); }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) { currentStep--; updateStepUI(); }
+    }
+  </script>
+</body>
+</html>

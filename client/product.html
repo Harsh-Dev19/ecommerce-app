@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Aurum Noir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav>
+    <a href="index.html" class="nav-logo">AURUM<span>noir</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Maison</a></li>
+      <li><a href="shop.html">Collections</a></li>
+      <li><a href="product.html?id=1">Signatures</a></li>
+      <li><a href="login.html">Account</a></li>
+    </ul>
+    <a href="cart.html" class="nav-cart">
+      <span>Cart</span>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div style="padding:6.5rem 4rem 0;display:flex;gap:.5rem;font-size:.7rem;color:var(--muted);letter-spacing:.05em">
+    <a href="index.html" style="color:var(--muted);transition:.3s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Maison</a>
+    <span>›</span>
+    <a href="shop.html" style="color:var(--muted);transition:.3s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Collections</a>
+    <span>›</span>
+    <span id="product-name-breadcrumb" style="color:var(--white)">Product</span>
+  </div>
+
+  <!-- ============ PRODUCT DETAIL ============ -->
+  <div class="product-detail">
+
+    <!-- Left: Visual -->
+    <div>
+      <div class="product-visual">
+        <div class="product-visual-emoji" id="product-emoji">🏺</div>
+        <!-- Gold shimmer overlay -->
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,.05) 0%,transparent 70%);pointer-events:none"></div>
+      </div>
+
+      <!-- Thumbnails (decorative alternative views) -->
+      <div class="product-thumbnails">
+        <div class="product-thumb active">🔬</div>
+        <div class="product-thumb">📦</div>
+        <div class="product-thumb">🎁</div>
+      </div>
+
+      <!-- Guarantees -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.5rem">
+        <div style="border:1px solid var(--border);padding:1rem;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:.3rem">🚚</div>
+          <div style="font-size:.65rem;letter-spacing:.1em;color:var(--muted)">FREE SHIPPING $300+</div>
+        </div>
+        <div style="border:1px solid var(--border);padding:1rem;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:.3rem">↩️</div>
+          <div style="font-size:.65rem;letter-spacing:.1em;color:var(--muted)">30-DAY RETURNS</div>
+        </div>
+        <div style="border:1px solid var(--border);padding:1rem;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:.3rem">✓</div>
+          <div style="font-size:.65rem;letter-spacing:.1em;color:var(--muted)">AUTHENTICATED</div>
+        </div>
+        <div style="border:1px solid var(--border);padding:1rem;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:.3rem">🎁</div>
+          <div style="font-size:.65rem;letter-spacing:.1em;color:var(--muted)">GIFT WRAPPING</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="product-info">
+      <span class="section-label" id="product-category">Oriental</span>
+
+      <h1 class="product-title" id="product-name">Oud Imperiale</h1>
+      <p class="product-subtitle" id="product-subtitle">The Emperor's Wood</p>
+
+      <div class="product-rating">
+        <span class="stars" id="product-stars">★★★★★</span>
+        <span class="rating-count" id="product-rating-count">(284 reviews)</span>
+      </div>
+
+      <div class="product-price-wrap">
+        <span class="product-price" id="product-price">$320</span>
+        <span class="product-price-original" id="product-original">$420</span>
+      </div>
+
+      <p class="product-desc" id="product-desc">
+        A commanding blend of rare Oud from the forests of Cambodia, infused with warm amber resins and aged sandalwood.
+      </p>
+
+      <div class="divider" style="margin:1.5rem 0"><div class="divider-diamond"></div></div>
+
+      <!-- Notes -->
+      <div class="product-notes">
+        <h4>Fragrance Notes</h4>
+        <div class="notes-list" id="product-notes"></div>
+      </div>
+
+      <!-- Size Selection -->
+      <div class="product-size">
+        <h4>Select Size</h4>
+        <div class="size-options">
+          <button class="size-btn" data-size="30ml">30ml</button>
+          <button class="size-btn active" data-size="100ml">100ml</button>
+          <button class="size-btn" data-size="200ml">200ml</button>
+        </div>
+      </div>
+
+      <!-- Quantity -->
+      <div style="margin-bottom:1.5rem">
+        <h4 style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Quantity</h4>
+        <div class="product-qty">
+          <button class="qty-btn" id="qty-minus">−</button>
+          <div class="qty-display" id="qty-display">1</div>
+          <button class="qty-btn" id="qty-plus">+</button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="product-actions">
+        <button class="btn btn-gold" id="add-to-cart" style="flex:1"><span>Add to Cart</span></button>
+        <button class="btn btn-outline" id="buy-now" style="flex:1"><span>Buy Now</span></button>
+      </div>
+
+      <!-- Wishlist -->
+      <button class="btn btn-ghost" style="width:100%;justify-content:center;margin-bottom:2rem">
+        <span>♡ Add to Wishlist</span>
+      </button>
+
+      <!-- Product Meta -->
+      <div class="product-meta">
+        <div class="meta-item">
+          <span class="meta-label">Concentration</span>
+          <span class="meta-value" id="product-concentration">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Longevity</span>
+          <span class="meta-value" id="product-longevity">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Sillage</span>
+          <span class="meta-value" id="product-sillage">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Best Season</span>
+          <span class="meta-value" id="product-season">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Gender</span>
+          <span class="meta-value" id="product-gender">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RELATED PRODUCTS ============ -->
+  <section style="border-top:1px solid var(--border)">
+    <div class="section-header">
+      <span class="section-label">Continue Exploring</span>
+      <h2>You May Also <em style="font-style:italic;color:var(--gold)">Adore</em></h2>
+    </div>
+    <div class="products-grid" id="related-grid"></div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AURUM<em style="font-style:italic;color:var(--white)">noir</em></h3>
+        <p>A Parisian perfume maison dedicated to the art of rare and exceptional fragrances.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="shop.html">All Fragrances</a></li>
+          <li><a href="shop.html">Oriental Nights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="tracking.html">Order Tracking</a></li>
+          <li><a href="login.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aurum Noir. All rights reserved.</p>
+      <p style="color:var(--gold);font-size:.7rem;letter-spacing:.1em">PARIS · DUBAI · TOKYO</p>
+    </div>
+  </footer>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script>
+    // Sync breadcrumb name
+    document.addEventListener('DOMContentLoaded', () => {
+      const nameEl = document.getElementById('product-name');
+      const crumb = document.getElementById('product-name-breadcrumb');
+      if (nameEl && crumb) {
+        setTimeout(() => { crumb.textContent = nameEl.textContent; }, 50);
+      }
+    });
+
+    // Thumbnail interaction (decorative)
+    document.querySelectorAll('.product-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
